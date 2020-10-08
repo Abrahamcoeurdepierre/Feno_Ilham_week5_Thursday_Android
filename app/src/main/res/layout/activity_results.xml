@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView71"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student First Name: "
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Last Name"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student City"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Province"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentProvince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Country"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Citizenship"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentCitizenship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView1000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent First Name: "
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView1001"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent Last Name"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/ParentLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView1002"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent City"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/ParentCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView1003"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prent Province"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentProvince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView1004"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent Country"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView1005"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Citizenship"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentCitizenship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent Occupation"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Universitas Asal"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universitasAsal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Faculty"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universitasFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Program Study"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/programStudy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privince Of the University"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universitasProvince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City of the university"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universitasKota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address of the University"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universitasAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+            android:id="@+id/textView55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accreditation of the university"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universitasAccreditation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Postal Code"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView84"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student PHONE NUMBER"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/studentPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent Postal code"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView87"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent Phone Number"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/parentPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/textView89"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="University Postal Code"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/universityPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
