@@ -52,7 +52,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/SdtFirstName"
+        android:id="@+id/SdtMotherName"
         android:layout_width="153dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -80,7 +80,7 @@
 
 
     <EditText
-        android:id="@+id/SdtBirthPlace"
+        android:id="@+id/SdtMotherJob"
         android:layout_width="152dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -277,7 +277,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/SdtNIK"
+        android:id="@+id/SdtMotherNIK"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="18dp"
@@ -310,11 +310,13 @@
         android:id="@+id/SdtReason"
         android:layout_width="163dp"
         android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Reason"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="522dp" />
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/SdtStudyProgram" />
 
     <EditText
         android:id="@+id/SdtAchievement"

@@ -14,8 +14,6 @@ import android.widget.Spinner;
 import org.parceler.Parcels;
 
 public class MainActivity extends AppCompatActivity {
-
-
     private EditText firstName, lastName,postalCode,country,citizenship,phoneNumber;
     private Spinner spinnerCity, spinnerProvince;
     private RadioGroup rgGender;
