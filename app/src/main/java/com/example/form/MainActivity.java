@@ -46,12 +46,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void init(){
-        firstName = findViewById(R.id.SdtFirstName);
-        lastName = findViewById(R.id.SdtEmail);
+        firstName = findViewById(R.id.sdtName);
+        lastName = findViewById(R.id.sdtEmail);
         spinnerCity = findViewById(R.id.spinnerCity);
         spinnerProvince = findViewById(R.id.spinnerProvince);
-        postalCode = findViewById(R.id.SdtPostalCode);
-        phoneNumber = findViewById(R.id.SdtPhoneNumber);
+        postalCode = findViewById(R.id.sdtPostalCode);
+        phoneNumber = findViewById(R.id.sdtPhoneNumber);
     }
 
     public void openParentActivity(View view) {

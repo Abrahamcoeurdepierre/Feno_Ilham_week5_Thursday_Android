@@ -7,7 +7,7 @@
     tools:context=".ParentActivity">
 
     <EditText
-        android:id="@+id/sdtMotherEducation"
+        android:id="@+id/parMotherEducation"
         android:layout_width="178dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -16,10 +16,10 @@
         android:hint="Mother's Education"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtMotherJob" />
+        app:layout_constraintTop_toBottomOf="@+id/parMotherJob" />
 
     <EditText
-        android:id="@+id/sdtFatherEducation"
+        android:id="@+id/parFatherEducation"
         android:layout_width="152dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -28,10 +28,10 @@
         android:hint="Father's Education"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtFatherJob" />
+        app:layout_constraintTop_toBottomOf="@+id/parFatherJob" />
 
     <EditText
-        android:id="@+id/SdtYearMom"
+        android:id="@+id/parYearMom"
         android:layout_width="178dp"
         android:layout_height="43dp"
         android:layout_marginStart="12dp"
@@ -40,10 +40,10 @@
         android:hint="Year Born Mother"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtPostalCode" />
+        app:layout_constraintTop_toBottomOf="@+id/parPostalCode" />
 
     <EditText
-        android:id="@+id/SdtFatherEducation"
+        android:id="@+id/parFatherMom"
         android:layout_width="152dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -52,10 +52,10 @@
         android:hint="Year Born Father"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtRW" />
+        app:layout_constraintTop_toBottomOf="@+id/parRW" />
 
     <EditText
-        android:id="@+id/SdtFatherName"
+        android:id="@+id/parFatherName"
         android:layout_width="153dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/sdtMotherNIK"
+        android:id="@+id/parMotherNIK"
         android:layout_width="174dp"
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
@@ -77,7 +77,7 @@
         android:hint="Mother NIK"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtMotherName" />
+        app:layout_constraintTop_toBottomOf="@+id/parMotherName" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -100,7 +100,7 @@
 
 
     <EditText
-        android:id="@+id/SdtMotherName"
+        android:id="@+id/parMotherName"
         android:layout_width="170dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -113,7 +113,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/SdtPhone"
+        android:id="@+id/parPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -122,7 +122,7 @@
         android:hint="Phone Number"
         android:inputType="phone"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtMotherEducation" />
+        app:layout_constraintTop_toBottomOf="@+id/parMotherEducation" />
 
     <Spinner
         android:id="@+id/spinnerCity"
@@ -131,10 +131,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/parPhone" />
 
     <EditText
-        android:id="@+id/SdtRT"
+        android:id="@+id/parRT"
         android:layout_width="61dp"
         android:layout_height="36dp"
         android:layout_marginStart="24dp"
@@ -153,10 +153,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/parEmail" />
 
     <EditText
-        android:id="@+id/SdtRW"
+        android:id="@+id/parRW"
         android:layout_width="61dp"
         android:layout_height="36dp"
         android:layout_marginTop="20dp"
@@ -169,7 +169,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
 
     <EditText
-        android:id="@+id/SdtPostalCode"
+        android:id="@+id/parPostalCode"
         android:layout_width="91dp"
         android:layout_height="36dp"
         android:layout_marginStart="16dp"
@@ -182,7 +182,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerCity" />
 
     <EditText
-        android:id="@+id/SdtEmail"
+        android:id="@+id/parEmail"
         android:layout_width="153dp"
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
@@ -191,10 +191,10 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtFatherEducation" />
+        app:layout_constraintTop_toBottomOf="@+id/parFatherEducation" />
 
     <EditText
-        android:id="@+id/sdtFatherJob"
+        android:id="@+id/parFatherJob"
         android:layout_width="152dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -203,10 +203,10 @@
         android:hint="Father's Job"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtFatherNIK" />
+        app:layout_constraintTop_toBottomOf="@+id/parFatherNIK" />
 
     <EditText
-        android:id="@+id/sdtMotherJob"
+        android:id="@+id/parMotherJob"
         android:layout_width="176dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -215,7 +215,7 @@
         android:hint="Mother's Job"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtMotherNIK" />
+        app:layout_constraintTop_toBottomOf="@+id/parMotherNIK" />
 
     <Button
         android:id="@+id/button"
@@ -230,7 +230,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/SdtFatherNIK"
+        android:id="@+id/parFatherNIK"
         android:layout_width="155dp"
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
@@ -239,7 +239,7 @@
         android:hint="Father NIK"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtFatherName" />
+        app:layout_constraintTop_toBottomOf="@+id/parFatherName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

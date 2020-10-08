@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/SdtEmail"
+        android:id="@+id/sdtEmail"
         android:layout_width="137dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
 
 
     <EditText
-        android:id="@+id/SdtDOB"
+        android:id="@+id/sdtDOB"
         android:layout_width="139dp"
         android:layout_height="41dp"
         android:layout_marginStart="20dp"
@@ -50,7 +50,7 @@
         android:hint="DOB"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtEmail" />
 
     <TextView
         android:id="@+id/textView3"
@@ -61,7 +61,7 @@
         android:text="Gender :"
         android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/SdtMotherJob" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtBirthPlace" />
 
     <TextView
         android:id="@+id/textView4"
@@ -74,7 +74,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtDOB" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtDOB" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
@@ -107,7 +107,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/SdtVerifyPassword"
+        android:id="@+id/sdtVerifyPassword"
         android:layout_width="151dp"
         android:layout_height="39dp"
         android:layout_marginStart="16dp"
@@ -119,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
     <EditText
-        android:id="@+id/SdtMajor"
+        android:id="@+id/sdtMajor"
         android:layout_width="166dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -129,10 +129,10 @@
         android:inputType="textPersonName"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtPostalCode" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtPostalCode" />
 
     <EditText
-        android:id="@+id/SdtStudyProgram"
+        android:id="@+id/sdtStudyProgram"
         android:layout_width="166dp"
         android:layout_height="36dp"
         android:layout_marginStart="16dp"
@@ -142,10 +142,10 @@
         android:inputType="textPersonName"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtMajor" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtMajor" />
 
     <EditText
-        android:id="@+id/SdtPostalCode"
+        android:id="@+id/sdtPostalCode"
         android:layout_width="91dp"
         android:layout_height="36dp"
         android:layout_marginStart="16dp"
@@ -158,7 +158,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerCity" />
 
     <EditText
-        android:id="@+id/SdtPhoneNumber"
+        android:id="@+id/sdtPhoneNumber"
         android:layout_width="159dp"
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
@@ -168,7 +168,7 @@
         android:inputType="textPersonName"
         android:textSize="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtNIK" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtNIK" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -202,7 +202,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/SdtMotherJob"
+        android:id="@+id/sdtBirthPlace"
         android:layout_width="152dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -211,7 +211,7 @@
         android:hint="Birth place"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtMotherName" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtName" />
 
     <Button
         android:id="@+id/button"
@@ -232,7 +232,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtVerifyPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtVerifyPassword" />
 
     <Spinner
         android:id="@+id/spinnerProvince"
@@ -241,10 +241,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtPassword" />
 
     <EditText
-        android:id="@+id/SdtRW"
+        android:id="@+id/sdtRW"
         android:layout_width="61dp"
         android:layout_height="36dp"
         android:layout_marginTop="24dp"
@@ -257,7 +257,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
 
     <EditText
-        android:id="@+id/SdtRT"
+        android:id="@+id/sdtRT"
         android:layout_width="61dp"
         android:layout_height="36dp"
         android:layout_marginStart="32dp"
@@ -270,7 +270,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
 
     <EditText
-        android:id="@+id/SdtNIK"
+        android:id="@+id/sdtNIK"
         android:layout_width="150dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -279,10 +279,10 @@
         android:hint="NIK"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtRW" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtRW" />
 
     <EditText
-        android:id="@+id/SdtPassword"
+        android:id="@+id/sdtPassword"
         android:layout_width="151dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -294,7 +294,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/SdtMotherName"
+        android:id="@+id/sdtName"
         android:layout_width="153dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -307,7 +307,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/SdtAchievement"
+        android:id="@+id/sdtAchievement"
         android:layout_width="161dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
@@ -316,10 +316,10 @@
         android:hint="Achievement"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtPhoneNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/sdtPhoneNumber" />
 
     <EditText
-        android:id="@+id/SdtReason"
+        android:id="@+id/sdtReason"
         android:layout_width="167dp"
         android:layout_height="51dp"
         android:layout_marginStart="16dp"
@@ -328,7 +328,7 @@
         android:hint="Reason"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/SdtStudyProgram"
+        app:layout_constraintTop_toBottomOf="@+id/sdtStudyProgram"
         tools:hint="Reason" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
