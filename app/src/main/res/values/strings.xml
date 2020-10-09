@@ -1,14 +1,13 @@
 <resources>
     <string name="app_name">Form</string>
-    <string-array name="UniProvinces">
+    <string-array name="Provinces">
         <item>Jakarta</item>
         <item>Special Region of Yogyakarta</item>
         <item>East Kalimantan</item>
-        <item>Riau Islands</item>
         <item>Bali</item>
         <item>Riau</item>
         <item>North Sulawesi</item>
-        <item>Banten</item>
+        <item>North Sumatera</item>
         <item>West Sumatra</item>
         <item>West Java</item>
         <item>Aceh</item>
@@ -21,7 +20,7 @@
         <item>Jambi</item>
     </string-array>
 
-    <string-array name="UniKota">
+    <string-array name="City">
         <item>Banda Aceh</item>
         <item>Langsa</item>
         <item>Lhokseumawe</item>
@@ -32,14 +31,14 @@
         <item>Pangkalpinang</item>
         <item>Cilegon</item>
         <item>Serang</item>
-        <item>Tangerang Selatan</item>
+        <item>Blitar</item>
         <item>Tangerang</item>
         <item>Bengkulu</item>
         <item>Gorontalo</item>
         <item>Yogyakarta</item>
-        <item>Tebingtinggi</item>
+        <item>Surabaya</item>
         <item>Tanjungbalai</item>
         <item>Sibolga</item>
-<item>Pematangsiantar</item>
+        <item>Malang</item>
     </string-array>
 </resources>

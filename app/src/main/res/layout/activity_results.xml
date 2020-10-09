@@ -1,422 +1,916 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ResultsActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="student"
+            type="com.example.form.models.Student" />
+        <variable
+            name="parent"
+            type="com.example.form.models.Parents" />
+        <variable
+            name="univ"
+            type="com.example.form.models.University" />
+    </data>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="32dp"
+                android:onClick="onClickBack"
+                android:text="Back to Main Page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIPK" />
 
             <TextView
-                android:id="@+id/textView71"
-                android:layout_width="match_parent"
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student First Name: "
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="Gender"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
-                android:id="@+id/studentFirstName"
-                android:layout_width="match_parent"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:fontFamily="serif"
+                android:text="Informasi Mahasiswa"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView74"
-                android:layout_width="match_parent"
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student Last Name"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="16dp"
+                android:fontFamily="serif"
+                android:text="Informasi Orang Tua"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudEmail" />
 
             <TextView
-                android:id="@+id/studentLastName"
-                android:layout_width="match_parent"
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp" />
+                android:layout_marginTop="16dp"
+                android:fontFamily="serif"
+                android:text="Informasi univ"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
             <TextView
-                android:id="@+id/textView75"
-                android:layout_width="match_parent"
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student City"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="16dp"
+                android:text="Name"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
-                android:id="@+id/studentCity"
-                android:layout_width="match_parent"
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="Major"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Study Programme"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Reason "
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="NIK"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Prestasi"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tempat, \nTanggal Lahir"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kewarganegaraan"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Alamat"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RT"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RW"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Province"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="City"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Postal Code"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="No. Telp Orang Tua"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Email Orang Tua"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pendidikan Terakhir Ayah"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pendidikan Terakhir Ibu"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pekerjaan Ayah"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pekerjaan Ibu"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nama Universitas"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nama Fakultas"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Provinsi Universitas Asal"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kota Universitas Asal"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Alamat Universitas Asal"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kode Pos"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/txtAlamatUniv" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Akreditasi Universitas \nAsal"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nilai IPK"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Phone Number"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Email"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="NIK Ayah"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nama Ibu"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="NIK Ibu"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tahun Lahir Ayah"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tahun Lahir Ibu"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nama Ayah"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Register Status"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/txtStudName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@{student.name}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/txtStudMajor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.major}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudName" />
+
+            <TextView
+                android:id="@+id/txtStudProg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.studyProgram}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudMajor" />
+
+            <TextView
+                android:id="@+id/txtStudRegStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.status}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudProg" />
+
+            <TextView
+                android:id="@+id/txtStudReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.reason}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudRegStats" />
+
+            <TextView
+                android:id="@+id/txtStudNIK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.NIK}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/txtStudPrestasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.achievement}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudNIK" />
+
+            <TextView
+                android:id="@+id/txtStudGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.gender}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudPrestasi" />
+
+            <TextView
+                android:id="@+id/txtTTL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.DOB}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudGender" />
+
+            <TextView
+                android:id="@+id/txtStudKewarganegaraan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.nationality}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/txtStudAlamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.address}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudKewarganegaraan" />
+
+            <TextView
+                android:id="@+id/txtStudEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="@{student.email}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudPhone2" />
+
+            <TextView
+                android:id="@+id/txtAyahName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@{parent.fatherName}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <TextView
+                android:id="@+id/txtNikAyah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.fatherNIK}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtAyahName" />
+
+            <TextView
+                android:id="@+id/txtNikIbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.motherNIK}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtNamaIbu" />
+
+            <TextView
+                android:id="@+id/txtThAyah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.yearBornFather}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtNikIbu" />
+
+            <TextView
+                android:id="@+id/txtThIbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.yearBornMother}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtThAyah" />
+
+            <TextView
+                android:id="@+id/txtOrtuRt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="RTTTTT"
+                android:text="@{parent.rt}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/txtThIbu" />
+
+            <TextView
+                android:id="@+id/txtOrtuRw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.rw}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuRt" />
+
+            <TextView
+                android:id="@+id/txtOrtuProvince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.province}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuRw" />
+
+            <TextView
+                android:id="@+id/txtOrtuCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.city}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuProvince" />
+
+            <TextView
+                android:id="@+id/txtOrtuPostcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.postalCode}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuCity" />
+
+            <TextView
+                android:id="@+id/txtOrtuTelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.phoneNum}"
+                android:hint="initelpon"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuPostcode" />
+
+            <TextView
+                android:id="@+id/txtOrtuEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.email}"
+                android:hint="ini email"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuTelp" />
+
+            <TextView
+                android:id="@+id/txtAyahPend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.fatherEdu}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrtuEmail" />
+
+            <TextView
+                android:id="@+id/txtPendIbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.motherEdu}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtAyahPend" />
+
+            <TextView
+                android:id="@+id/txtJobIbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.motherJob}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtJobAyah" />
+
+            <TextView
+                android:id="@+id/txtJobAyah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.fatherJob}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtPendIbu" />
+
+            <TextView
+                android:id="@+id/txtNamaIbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{parent.motherName}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtNikAyah" />
+
+            <TextView
+                android:id="@+id/txtStudPhone2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{student.phoneNumber}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudPostcode" />
+
+            <TextView
+                android:id="@+id/txtNamaUniv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@{univ.uniName}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/txtNamaFakultas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.faculty}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtNamaUniv" />
+
+            <TextView
+                android:id="@+id/txtProvUniv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.province}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtNamaFakultas" />
+
+            <TextView
+                android:id="@+id/txtKotaUniv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.city}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtProvUniv" />
+
+            <TextView
+                android:id="@+id/txtAlamatUniv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.address}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtKotaUniv" />
+
+            <TextView
+                android:id="@+id/txtUnivKodepos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.postalCode}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtAlamatUniv" />
+
+            <TextView
+                android:id="@+id/txtUnivAkreditasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.accreditation}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtUnivKodepos" />
+
+            <TextView
+                android:id="@+id/txtIPK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{univ.ipk}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="183dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RT"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RW"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Province"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
             <TextView
                 android:id="@+id/textView47"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student Province"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="City"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
             <TextView
-                android:id="@+id/studentProvince"
-                android:layout_width="match_parent"
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="Postal Code"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
             <TextView
-                android:id="@+id/textView72"
-                android:layout_width="match_parent"
+                android:id="@+id/txtStudRt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student Country"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="@{student.rt}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudAlamat" />
 
             <TextView
-                android:id="@+id/studentCountry"
-                android:layout_width="match_parent"
+                android:id="@+id/txtStudRW"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="@{student.rw}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudRt" />
 
             <TextView
-                android:id="@+id/textView70"
-                android:layout_width="match_parent"
+                android:id="@+id/txtStudProvince"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Student Citizenship"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="@{student.province}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudRW" />
 
             <TextView
-                android:id="@+id/studentCitizenship"
-                android:layout_width="match_parent"
+                android:id="@+id/txtStudCity"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="@{student.city}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudProvince" />
 
             <TextView
-                android:id="@+id/textView1000"
-                android:layout_width="match_parent"
+                android:id="@+id/txtStudPostcode"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Parent First Name: "
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+                android:layout_marginTop="8dp"
+                android:text="@{student.postalCode}"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txtStudCity" />
 
-            <TextView
-                android:id="@+id/parentFirstName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textView1001"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parent Last Name"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/ParentLastName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp" />
-
-            <TextView
-                android:id="@+id/textView1002"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parent City"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/ParentCity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView1003"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Prent Province"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/parentProvince"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView1004"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parent Country"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/parentCountry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView1005"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Student Citizenship"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/parentCitizenship"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView67"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parent Occupation"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/parentOccupation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView65"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Universitas Asal"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universitasAsal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView62"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Faculty"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universitasFaculty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView57"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Program Study"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/programStudy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Privince Of the University"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universitasProvince"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView58"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="City of the university"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universitasKota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView54"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Address of the University"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universitasAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-            android:id="@+id/textView55"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Accreditation of the university"
-            android:textColor="#000000"
-            android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universitasAccreditation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView82"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Student Postal Code"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/studentPostalCode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView84"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Student PHONE NUMBER"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/studentPhoneNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView85"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parent Postal code"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/parentPostalCode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView87"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parent Phone Number"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/parentPhoneNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/textView89"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="University Postal Code"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-            <TextView
-                android:id="@+id/universityPostalCode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="15dp"/>
-
-
-        </LinearLayout>
     </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -6,13 +6,14 @@ import android.os.Parcelable;
 
 public class Parents implements Parcelable{
 
-    private String fatherName, motherName, fatherJob, motherJob, fatherEdu, motherEdu, email, city, province, rt, rw;
-    private int fatherNIK , motherNIK, phoneNum, postalCode, yearBornFather, yearBornMother;
+    private String fatherName, motherName, fatherJob, motherJob, fatherEdu, motherEdu, email, city,
+            province, rt, rw, fatherNIK,motherNIK,phoneNum, yearBornFather,yearBornMother;
+    private String postalCode;
 
     public Parents() {
     }
 
-    public Parents(String fatherName, String motherName, String fatherJob, String motherJob, String fatherEdu, String motherEdu, String email, String city, String province, String rt, String rw, int fatherNIK, int motherNIK, int phoneNum, int postalCode, int yearBornFather, int yearBornMother) {
+    public Parents(String fatherName, String motherName, String fatherJob, String motherJob, String fatherEdu, String motherEdu, String email, String city, String province, String rt, String rw, String fatherNIK, String motherNIK, String phoneNum, String yearBornFather, String yearBornMother, String postalCode) {
         this.fatherName = fatherName;
         this.motherName = motherName;
         this.fatherJob = fatherJob;
@@ -27,69 +28,10 @@ public class Parents implements Parcelable{
         this.fatherNIK = fatherNIK;
         this.motherNIK = motherNIK;
         this.phoneNum = phoneNum;
-        this.postalCode = postalCode;
         this.yearBornFather = yearBornFather;
         this.yearBornMother = yearBornMother;
+        this.postalCode = postalCode;
     }
-
-
-    protected Parents(Parcel in) {
-        fatherName = in.readString();
-        motherName = in.readString();
-        fatherJob = in.readString();
-        motherJob = in.readString();
-        fatherEdu = in.readString();
-        motherEdu = in.readString();
-        email = in.readString();
-        city = in.readString();
-        province = in.readString();
-        rt = in.readString();
-        rw = in.readString();
-        fatherNIK = in.readInt();
-        motherNIK = in.readInt();
-        phoneNum = in.readInt();
-        postalCode = in.readInt();
-        yearBornFather = in.readInt();
-        yearBornMother = in.readInt();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(fatherName);
-        dest.writeString(motherName);
-        dest.writeString(fatherJob);
-        dest.writeString(motherJob);
-        dest.writeString(fatherEdu);
-        dest.writeString(motherEdu);
-        dest.writeString(email);
-        dest.writeString(city);
-        dest.writeString(province);
-        dest.writeString(rt);
-        dest.writeString(rw);
-        dest.writeInt(fatherNIK);
-        dest.writeInt(motherNIK);
-        dest.writeInt(phoneNum);
-        dest.writeInt(postalCode);
-        dest.writeInt(yearBornFather);
-        dest.writeInt(yearBornMother);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<Parents> CREATOR = new Creator<Parents>() {
-        @Override
-        public Parents createFromParcel(Parcel in) {
-            return new Parents(in);
-        }
-
-        @Override
-        public Parents[] newArray(int size) {
-            return new Parents[size];
-        }
-    };
 
     public String getFatherName() {
         return fatherName;
@@ -179,51 +121,113 @@ public class Parents implements Parcelable{
         this.rw = rw;
     }
 
-    public int getFatherNIK() {
+    public String getFatherNIK() {
         return fatherNIK;
     }
 
-    public void setFatherNIK(int fatherNIK) {
+    public void setFatherNIK(String fatherNIK) {
         this.fatherNIK = fatherNIK;
     }
 
-    public int getMotherNIK() {
+    public String getMotherNIK() {
         return motherNIK;
     }
 
-    public void setMotherNIK(int motherNIK) {
+    public void setMotherNIK(String motherNIK) {
         this.motherNIK = motherNIK;
     }
 
-    public int getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 
-    public int getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(int postalCode) {
-        this.postalCode = postalCode;
-    }
-
-    public int getYearBornFather() {
+    public String getYearBornFather() {
         return yearBornFather;
     }
 
-    public void setYearBornFather(int yearBornFather) {
+    public void setYearBornFather(String yearBornFather) {
         this.yearBornFather = yearBornFather;
     }
 
-    public int getYearBornMother() {
+    public String getYearBornMother() {
         return yearBornMother;
     }
 
-    public void setYearBornMother(int yearBornMother) {
+    public void setYearBornMother(String yearBornMother) {
         this.yearBornMother = yearBornMother;
     }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public static Creator<Parents> getCREATOR() {
+        return CREATOR;
+    }
+
+    protected Parents(Parcel in) {
+        fatherName = in.readString();
+        motherName = in.readString();
+        fatherJob = in.readString();
+        motherJob = in.readString();
+        fatherEdu = in.readString();
+        motherEdu = in.readString();
+        email = in.readString();
+        city = in.readString();
+        province = in.readString();
+        rt = in.readString();
+        rw = in.readString();
+        fatherNIK = in.readString();
+        motherNIK = in.readString();
+        phoneNum = in.readString();
+        yearBornFather = in.readString();
+        yearBornMother = in.readString();
+        postalCode = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(fatherName);
+        dest.writeString(motherName);
+        dest.writeString(fatherJob);
+        dest.writeString(motherJob);
+        dest.writeString(fatherEdu);
+        dest.writeString(motherEdu);
+        dest.writeString(email);
+        dest.writeString(city);
+        dest.writeString(province);
+        dest.writeString(rt);
+        dest.writeString(rw);
+        dest.writeString(fatherNIK);
+        dest.writeString(motherNIK);
+        dest.writeString(phoneNum);
+        dest.writeString(yearBornFather);
+        dest.writeString(yearBornMother);
+        dest.writeString(postalCode);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Parents> CREATOR = new Creator<Parents>() {
+        @Override
+        public Parents createFromParcel(Parcel in) {
+            return new Parents(in);
+        }
+
+        @Override
+        public Parents[] newArray(int size) {
+            return new Parents[size];
+        }
+    };
 }

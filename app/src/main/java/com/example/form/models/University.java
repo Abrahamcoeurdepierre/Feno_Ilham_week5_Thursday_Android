@@ -3,16 +3,15 @@ package com.example.form.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class University implements Parcelable{
+public class University implements Parcelable {
 
-    private String uni, faculty, studyProgramme, province, city, address, accreditation;
-    private int postalCode;
+    private String uniName, faculty, studyProgramme, province, city, address, accreditation, postalCode, ipk;
 
     public University() {
     }
 
-    public University(String uni, String faculty, String studyProgramme, String province, String city, String address, String accreditation, int postalCode) {
-        this.uni = uni;
+    public University(String uniName, String faculty, String studyProgramme, String province, String city, String address, String accreditation, String postalCode, String ipk) {
+        this.uniName = uniName;
         this.faculty = faculty;
         this.studyProgramme = studyProgramme;
         this.province = province;
@@ -20,29 +19,36 @@ public class University implements Parcelable{
         this.address = address;
         this.accreditation = accreditation;
         this.postalCode = postalCode;
+        this.ipk = ipk;
     }
 
     protected University(Parcel in) {
-        uni = in.readString();
+        uniName = in.readString();
         faculty = in.readString();
         studyProgramme = in.readString();
         province = in.readString();
         city = in.readString();
         address = in.readString();
         accreditation = in.readString();
-        postalCode = in.readInt();
+        postalCode = in.readString();
+        ipk = in.readString();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(uni);
+        dest.writeString(uniName);
         dest.writeString(faculty);
         dest.writeString(studyProgramme);
         dest.writeString(province);
         dest.writeString(city);
         dest.writeString(address);
         dest.writeString(accreditation);
-        dest.writeInt(postalCode);
+        dest.writeString(postalCode);
+        dest.writeString(ipk);
+    }
+
+    public static Creator<University> getCREATOR() {
+        return CREATOR;
     }
 
     @Override
@@ -62,12 +68,12 @@ public class University implements Parcelable{
         }
     };
 
-    public String getUni() {
-        return uni;
+    public String getUniName() {
+        return uniName;
     }
 
-    public void setUni(String uni) {
-        this.uni = uni;
+    public void setUniName(String uniName) {
+        this.uniName = uniName;
     }
 
     public String getFaculty() {
@@ -118,11 +124,20 @@ public class University implements Parcelable{
         this.accreditation = accreditation;
     }
 
-    public int getPostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
-    public void setPostalCode(int postalCode) {
+    public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
+
+    public String getIpk() {
+        return ipk;
+    }
+
+    public void setIpk(String ipk) {
+        this.ipk = ipk;
+    }
 }
+

@@ -1,334 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="200dp" />
+    <data>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Student Information"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/sdtEmail"
-        android:layout_width="137dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="51dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </data>
 
 
-    <EditText
-        android:id="@+id/sdtDOB"
-        android:layout_width="139dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="DOB"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtEmail" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="52dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="132dp"
-        android:text="Gender :"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/sdtBirthPlace" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="121dp"
-        android:text="Nationality :"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtDOB" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="187dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FFFFFF">
 
-            <RadioButton
-                android:id="@+id/rbIndonesia"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline9"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Indonesia" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="200dp" />
 
-            <RadioButton
-                android:id="@+id/rbForeign"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Foreign" />
-        </LinearLayout>
-    </RadioGroup>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Student Information"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/sdtVerifyPassword"
-        android:layout_width="151dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Verify Password"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+            <EditText
+                android:id="@+id/stdEmail"
+                android:layout_width="137dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="51dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/sdtMajor"
-        android:layout_width="166dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="15"
-        android:hint="Major"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtPostalCode" />
 
-    <EditText
-        android:id="@+id/sdtStudyProgram"
-        android:layout_width="166dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="15"
-        android:hint="Study Program"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtMajor" />
+            <EditText
+                android:id="@+id/stdDOB"
+                android:layout_width="139dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="DOB"
+                android:inputType="date"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdEmail" />
 
-    <EditText
-        android:id="@+id/sdtPostalCode"
-        android:layout_width="91dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:ems="15"
-        android:hint="Postal Code"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCity" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="132dp"
+                android:text="Gender :"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/stdBirthPlace" />
 
-    <EditText
-        android:id="@+id/sdtPhoneNumber"
-        android:layout_width="159dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="15"
-        android:hint="Phone Number"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtNIK" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
-        android:paddingLeft="0dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rbMale"
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="121dp"
+                android:text="Nationality :"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdDOB" />
+
+            <RadioGroup
+                android:id="@+id/rgNationality"
+                android:layout_width="187dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbIndonesia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Indonesia" />
+
+                    <RadioButton
+                        android:id="@+id/rbForeign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Foreign" />
+                </LinearLayout>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/stdVerifyPassword"
+                android:layout_width="151dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Verify Password"
+                android:inputType="textPassword"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/rgNationality" />
+
+            <EditText
+                android:id="@+id/stdMajor"
+                android:layout_width="166dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="15"
+                android:hint="Major"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdPostalCode" />
+
+            <EditText
+                android:id="@+id/stdStudyProgram"
+                android:layout_width="166dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="15"
+                android:hint="Study Program"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdMajor" />
+
+            <EditText
+                android:id="@+id/stdPostalCode"
+                android:layout_width="91dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:ems="15"
+                android:hint="Postal Code"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCity" />
+
+            <EditText
+                android:id="@+id/stdPhoneNumber"
+                android:layout_width="159dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="15"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdNIK" />
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="160dp"
                 android:layout_height="45dp"
-                android:layout_weight="1"
-                android:text="Male" />
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:paddingLeft="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-            <RadioButton
-                android:id="@+id/rbFemale"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Female" />
+                </LinearLayout>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/stdBirthPlace"
+                android:layout_width="152dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:ems="10"
+                android:hint="Birth place"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdName" />
+
+            <Button
+                android:id="@+id/button"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Female" />
-        </LinearLayout>
-    </RadioGroup>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:onClick="onClickNext"
+                android:text="Next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stdAddress" />
 
-    <EditText
-        android:id="@+id/sdtBirthPlace"
-        android:layout_width="152dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:hint="Birth place"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtName" />
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_width="149dp"
+                android:entries="@array/City"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdVerifyPassword" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:onClick="openParentActivity"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+            <Spinner
+                android:id="@+id/spinnerProvince"
+                android:layout_width="149dp"
+                android:layout_height="28dp"
+                android:entries="@array/Provinces"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdPassword" />
 
-    <Spinner
-        android:id="@+id/spinnerCity"
-        android:layout_width="149dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtVerifyPassword" />
+            <EditText
+                android:id="@+id/stdRW"
+                android:layout_width="61dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:ems="15"
+                android:hint="RW"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
 
-    <Spinner
-        android:id="@+id/spinnerProvince"
-        android:layout_width="149dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtPassword" />
+            <EditText
+                android:id="@+id/stdRT"
+                android:layout_width="61dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:ems="15"
+                android:hint="RT"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
 
-    <EditText
-        android:id="@+id/sdtRW"
-        android:layout_width="61dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:ems="15"
-        android:hint="RW"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
+            <EditText
+                android:id="@+id/stdNIK"
+                android:layout_width="150dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="NIK"
+                android:inputType="number"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdRW" />
 
-    <EditText
-        android:id="@+id/sdtRT"
-        android:layout_width="61dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:ems="15"
-        android:hint="RT"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerProvince" />
+            <EditText
+                android:id="@+id/stdPassword"
+                android:layout_width="151dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/rgGender" />
 
-    <EditText
-        android:id="@+id/sdtNIK"
-        android:layout_width="150dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="NIK"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtRW" />
+            <EditText
+                android:id="@+id/stdName"
+                android:layout_width="153dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:ems="15"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/sdtPassword"
-        android:layout_width="151dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            <EditText
+                android:id="@+id/stdAchievement"
+                android:layout_width="161dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                android:ems="10"
+                android:hint="Achievement"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdPhoneNumber" />
 
-    <EditText
-        android:id="@+id/sdtName"
-        android:layout_width="153dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:ems="15"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <EditText
+                android:id="@+id/stdAddress"
+                android:layout_width="161dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="12dp"
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdAchievement" />
 
-    <EditText
-        android:id="@+id/sdtAchievement"
-        android:layout_width="161dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Achievement"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtPhoneNumber" />
+            <EditText
+                android:id="@+id/stdStatus"
+                android:layout_width="167dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Status"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdReason2" />
 
-    <EditText
-        android:id="@+id/sdtReason"
-        android:layout_width="167dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="Reason"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/sdtStudyProgram"
-        tools:hint="Reason" />
+            <EditText
+                android:id="@+id/stdReason2"
+                android:layout_width="167dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:hint="Reason"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
+                app:layout_constraintTop_toBottomOf="@+id/stdStudyProgram" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

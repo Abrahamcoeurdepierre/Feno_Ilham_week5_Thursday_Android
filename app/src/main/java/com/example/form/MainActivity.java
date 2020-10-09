@@ -1,76 +1,117 @@
 package com.example.form;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.Spinner;
 
-import org.parceler.Parcels;
+import com.example.form.databinding.ActivityMainBinding;
+import com.example.form.models.Student;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText firstName, lastName,postalCode,country,citizenship,phoneNumber;
-    private Spinner spinnerCity, spinnerProvince;
-    private RadioGroup rgGender;
-    private RadioButton rbMale, rbFemale;
-    private String selectedGender;
-
+    ActivityMainBinding bind;
+    DatePickerDialog picker;
+    Student std;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        init();
-        rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        setTitle("Student Info");
+        bind = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        std = new Student();
+        std.setGender("Male");
+        std.setNationality("Indonesia");
+        //set date picker to date text field
+        bind.stdDOB.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (radioGroup.getCheckedRadioButtonId()){
-                    case R.id.rbMale:
-                        if(rbMale.isChecked()){
-                            rbFemale.setChecked(false);
-                            selectedGender = rbMale.getText().toString();}
-                        break;
-                    case R.id.rbFemale:
-                        if(rbFemale.isChecked()){
-                            rbMale.setChecked(false);
-                            selectedGender = rbFemale.getText().toString();}
-                        break;
+            public void onClick(View view) {
+                final Calendar calendar = Calendar.getInstance();
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
+                picker = new DatePickerDialog(MainActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                bind.stdDOB.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                            }
+                        }, year, month, day);
+                picker.show();
+            }
+        });
+
+        //set handler of radio button
+        bind.rbMale.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b) {
+                    std.setGender("Male");
+                    bind.rbFemale.setChecked(false);
+                }
+            }
+        });
+        bind.rbFemale.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    std.setGender("Female");
+                    bind.rbMale.setChecked(false);
+                }
+
+            }
+        });
+        bind.rbIndonesia.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    std.setNationality("Indonesia");
+                    bind.rbForeign.setChecked(false);
+                }
+            }
+        });
+        bind.rbForeign.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    std.setNationality("Foreign");
+                    bind.rbIndonesia.setChecked(false);
                 }
             }
         });
     }
-
-    public void init(){
-        firstName = findViewById(R.id.sdtName);
-        lastName = findViewById(R.id.sdtEmail);
-        spinnerCity = findViewById(R.id.spinnerCity);
-        spinnerProvince = findViewById(R.id.spinnerProvince);
-        postalCode = findViewById(R.id.sdtPostalCode);
-        phoneNumber = findViewById(R.id.sdtPhoneNumber);
-    }
-
-    public void openParentActivity(View view) {
-        Student student = new Student();
-
-        student.setStdFirstName(firstName.getText().toString());
-        student.setSdtLastName(lastName.getText().toString());
-        student.setSdtCity(spinnerCity.getSelectedItem().toString());
-        student.setSdtCitizenship(citizenship.getText().toString());
-        student.setSdtProvince(spinnerProvince.getSelectedItem().toString());
-        student.setSdtCountry(country.getText().toString());
-
-        student.setSdtPostalCode(Integer.parseInt(postalCode.getText().toString()));
-        student.setSdtPhoneNumber(Integer.parseInt(phoneNumber.getText().toString()));
-
-        Parcelable parcelable = Parcels.wrap(student);
+    public void onClickNext(View v){
         Intent intent = new Intent(this, ParentActivity.class);
-        intent.putExtra("Deta", parcelable);
-        startActivity(intent);
 
+        std.setName(bind.stdName.getText().toString());
+        std.setMajor(bind.stdMajor.getText().toString());
+        std.setBirthPlace(bind.stdBirthPlace.getText().toString());
+        std.setStudyProgram(bind.stdStudyProgram.getText().toString());
+        std.setStatus(bind.stdStatus.getText().toString());
+        std.setPassword(bind.stdPassword.getText().toString());
+        std.setReason(bind.stdReason2.getText().toString());
+        std.setNIK(bind.stdNIK.getText().toString());
+        std.setAchievement(bind.stdAchievement.getText().toString());
+        std.setDOB(bind.stdDOB.getText().toString());
+        std.setRt(bind.stdRT.getText().toString());
+        std.setRw(bind.stdRW.getText().toString());
+        std.setAddress(bind.stdAddress.getText().toString());
+        std.setReason(bind.stdReason2.getText().toString());
+        std.setCity(bind.spinnerCity.getSelectedItem().toString());
+        std.setProvince(bind.spinnerProvince.getSelectedItem().toString());
+        std.setPostalCode(bind.stdPostalCode.getText().toString());
+        std.setEmail(bind.stdEmail.getText().toString());
+        std.setPhoneNumber(bind.stdPhoneNumber.getText().toString());
+
+        intent.putExtra("STUDENT", std);
+        startActivity(intent);
     }
 }

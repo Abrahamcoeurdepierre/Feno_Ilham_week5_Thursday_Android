@@ -1,95 +1,48 @@
 package com.example.form;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
-import org.parceler.Parcels;
+import com.example.form.databinding.ActivityUniversityBinding;
+import com.example.form.models.Parents;
+import com.example.form.models.University;
+import com.example.form.models.Student;
 
+import java.util.Objects;
 
-public class UniversityActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    EditText asal, faculty, programStudy,address,akreditasi;
-    EditText kodePos;
-    Spinner city, province;
-    TextView debug;
-
+public class UniversityActivity extends AppCompatActivity {
+    ActivityUniversityBinding bind;
+    Student std;
+    Parents parent;
+    University university;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_university);
-        //Spinner 1:
-        Spinner spinner = findViewById(R.id.UniProvince);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.UniProvinces, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
-
-        //Spinner 2:
-        Spinner spinner2 = findViewById(R.id.UniKota);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.UniKota, android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
-        spinner2.setOnItemSelectedListener(this);
-
-
-
-        asal = findViewById(R.id.UniAsal);
-        faculty = findViewById(R.id.UniFaculty);
-        city = findViewById(R.id.UniKota);
-        province = findViewById(R.id.UniProvince);
-        kodePos = findViewById(R.id.UniCodePos);
-        address = findViewById(R.id.UniAddress);
-        akreditasi = findViewById(R.id.UniAkreditasi);
-        programStudy = findViewById(R.id.UniProStudy);
-        Parcelable parcelable = getIntent().getParcelableExtra("Deta");
-        Student student = Parcels.unwrap(parcelable);
-        debug = findViewById(R.id.textView);
-        debug.setText(student.getPrtLastName() + student.getSdtLastName() );
-
-
+        setTitle("University Information");
+        bind = DataBindingUtil.setContentView(this, R.layout.activity_university);
+        std = (Student) Objects.requireNonNull(getIntent().getExtras().getParcelable("STUDENT"));
+        parent = (Parents) Objects.requireNonNull(getIntent().getExtras().getParcelable("PARENT"));
+        university = new University();
     }
-
-    public void openResults(View view) {
-
-        Parcelable parcelable = getIntent().getParcelableExtra("Deta");
-        Student student = Parcels.unwrap(parcelable);
-
-        student.setUnivAsal(asal.getText().toString());
-        student.setUnivKota(city.getSelectedItem().toString());
-        student.setUnivProvince(province.getSelectedItem().toString());
-        student.setUnivAddress(address.getText().toString());
-        student.setUnivAkreditasi(akreditasi.getText().toString());
-
-        student.setUnivKodePos(Integer.parseInt(kodePos.getText().toString()));
-
-        Parcelable parcelable2 = Parcels.wrap(student);
+    public void openResults(View v){
         Intent intent = new Intent(this, ResultsActivity.class);
-        intent.putExtra("Deta", parcelable2);
+        university.setUniName(bind.UniName.getText().toString());
+        university.setFaculty(bind.UniFaculty.getText().toString());
+        university.setStudyProgramme(bind.UniProStudy.getText().toString());
+        university.setProvince(bind.UniProvince.getSelectedItem().toString());
+        university.setCity(bind.UniCity.getSelectedItem().toString());
+        university.setAddress(bind.UniAddress.getText().toString());
+        university.setPostalCode(bind.UniCodePos.getText().toString());
+        university.setAccreditation(bind.UniAkreditasi.getText().toString());
+        university.setIpk(bind.UniIPK.getText().toString());
+        intent.putExtra("STUDENT", std);
+        intent.putExtra("PARENT", parent);
+        intent.putExtra("UNIVERSITY", university);
         startActivity(intent);
-
-
     }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
-
-
-
 }
-
